@@ -30,6 +30,6 @@ int main(int argc, char** argv){
     ds.close();
     std::cout << Poco::DigestEngine::digestToHex(md5.digest()) << std::endl;
 
-    logger.information("Hello, POCO!");
+    poco_information(logger, "Hello, POCO!");
     return 0;
 }
