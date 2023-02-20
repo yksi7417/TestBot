@@ -1,7 +1,7 @@
 mkdir build 
 cd build
-conan install ..
+conan install .. --build missing
 
-cmake .. -G "Visual Studio 17"
+cmake .. -G "Visual Studio 17" 
 cmake --build . --config Release
 cd ..
