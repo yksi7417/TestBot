@@ -1,20 +1,15 @@
-#include <Poco/MD5Engine.h>
-#include <Poco/DigestStream.h>
 #include <Poco/Util/Application.h>
 #include <Poco/Logger.h>
 #include <iostream>
+#include "md5_plugin/md5.h"
 
 class MyApplication : public Poco::Util::Application
 {
 public:
     int main(const std::vector<std::string>& args)
     {
-        Poco::MD5Engine md5;
-        Poco::DigestOutputStream ds(md5);
-        ds << "abcdefghijklmnopqrstuvwxyz";
-        ds.close();
-
-        poco_information(logger(), Poco::DigestEngine::digestToHex(md5.digest()) );
+        Md5Plugin md5_plugin; 
+        poco_information(logger(), md5_plugin.getResult("abcdefghijklmnopqrstuvwxyz") );
         poco_information(logger(), "hello simplier !" );
 
         return Application::EXIT_OK;

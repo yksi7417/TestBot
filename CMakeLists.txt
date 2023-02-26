@@ -6,4 +6,4 @@ include(${CMAKE_BINARY_DIR}/conanbuildinfo.cmake)
 conan_basic_setup()
 
 add_subdirectory(tests)
-add_subdirectory(src/app)
+add_subdirectory(src)

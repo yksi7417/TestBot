@@ -1,1 +1,2 @@
+add_subdirectory(md5_plugin)
 add_subdirectory(app)
