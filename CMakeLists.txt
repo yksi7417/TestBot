@@ -10,11 +10,4 @@ find_package(GTest REQUIRED)
 add_executable(AppMain AppMain.cpp)
 target_link_libraries(AppMain ${CONAN_LIBS})
 
-add_executable(UnitTests
-    plugins/md5_plugin/test/TestMd5Case.cpp
-)
-
-target_link_libraries(UnitTests PRIVATE ${CONAN_LIBS})
-
-enable_testing()
-add_test(NAME UnitTests COMMAND UnitTests)
+add_subdirectory(tests)
