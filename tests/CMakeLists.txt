@@ -22,3 +22,4 @@ endfunction()
 
 # Add tests for each plugin
 add_plugin_tests(md5_plugin)
+add_plugin_tests(log_detector)

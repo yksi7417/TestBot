@@ -1,2 +1,3 @@
+add_subdirectory(log_detector)
 add_subdirectory(md5_plugin)
 add_subdirectory(app)
