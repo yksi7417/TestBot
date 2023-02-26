@@ -1,7 +1,9 @@
 #include <string>
 #include "log_detector/log_detector.h"
+#include "log_detector/log_event.h"
 
-bool LogDetector::detect(const IContext<std::string ,std::string>& context) const
+
+IEvent* LogDetector::detect(const IContext<std::string ,std::string>& context) const
 {
-    return false; 
-}
+    return new NullEvent();
+};

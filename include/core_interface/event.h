@@ -3,7 +3,12 @@
 
 class IEvent {
 public:
-    virtual void doSomething() = 0;
+    virtual uint32_t getEventId() = 0;
+};
+
+class NullEvent : public IEvent {
+public:
+    virtual uint32_t getEventId() override { return 0; }
 };
 
 #endif
