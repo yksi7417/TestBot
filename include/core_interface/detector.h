@@ -5,10 +5,10 @@
 #include "context.h"
 #include "event.h"
 
-template<typename K, typename V>
+template<typename T, typename K, typename V>
 class IDetector {
 public:
-    virtual IEvent* detect(const IContext<K,V>& context) const = 0; 
+    virtual T detect(const IContext<K,V>& context) const = 0; 
 };
 
 #endif

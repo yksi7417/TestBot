@@ -12,5 +12,5 @@ public:
 TEST(TestMd5Case, CannotDetectAnythingWithEmptyContext) {
     LogDetector log_detector; 
     MockContext context; 
-    EXPECT_FALSE(log_detector.detect(context));
+    EXPECT_EQ(0, log_detector.detect(context).getEventId());
 }
