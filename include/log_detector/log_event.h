@@ -12,7 +12,16 @@
 
 class LogEvent: IEvent{
 public:
-    LogEvent(uint32_t event_type_id_) : event_type_id(event_type_id_), timestamp_yyyymmdd_utc(0), timestamp_HHMMSSsss_utc(0), line_number(0) {}
+    LogEvent() : event_type_id(0), timestamp_yyyymmdd_utc(0), timestamp_HHMMSSsss_utc(0), line_number(0) {}
+
+    LogEvent(uint32_t event_type_id_, 
+            uint32_t timestamp_yyyymmdd_utc_, uint32_t timestamp_HHMMSSsss_utc_,
+            uint32_t line_number_) : 
+            event_type_id(event_type_id_), 
+            timestamp_yyyymmdd_utc(timestamp_yyyymmdd_utc_), timestamp_HHMMSSsss_utc(timestamp_HHMMSSsss_utc_), 
+            line_number(line_number_) 
+        {
+        }
 
     virtual uint32_t getEventId() 
     {

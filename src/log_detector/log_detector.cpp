@@ -4,5 +4,5 @@
 
 LogEvent LogDetector::detect(const IContext<std::string ,std::string>& context) const
 {
-    return LogEvent(0);
+    return LogEvent();
 };
