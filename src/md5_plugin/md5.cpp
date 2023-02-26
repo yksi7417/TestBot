@@ -7,7 +7,7 @@ std::string Md5Plugin::getResult(const std::string& input) const
 {
         Poco::MD5Engine md5;
         Poco::DigestOutputStream ds(md5);
-        ds << "abcdefghijklmnopqrstuvwxyz";
+        ds << input.c_str();
         ds.close();
         return Poco::DigestEngine::digestToHex(md5.digest());
 }
