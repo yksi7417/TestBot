@@ -5,7 +5,5 @@ set(CMAKE_CXX_STANDARD 11)
 include(${CMAKE_BINARY_DIR}/conanbuildinfo.cmake)
 conan_basic_setup()
 
-add_executable(AppMain AppMain.cpp)
-target_link_libraries(AppMain ${CONAN_LIBS})
-
 add_subdirectory(tests)
+add_subdirectory(src/app)
