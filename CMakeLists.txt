@@ -5,8 +5,6 @@ set(CMAKE_CXX_STANDARD 11)
 include(${CMAKE_BINARY_DIR}/conanbuildinfo.cmake)
 conan_basic_setup()
 
-find_package(GTest REQUIRED)
-
 add_executable(AppMain AppMain.cpp)
 target_link_libraries(AppMain ${CONAN_LIBS})
 

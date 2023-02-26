@@ -1,4 +1,5 @@
-# Set up testing using CTest
+find_package(GTest REQUIRED)
+
 enable_testing()
 
 # Define a function to add tests for each plugin
