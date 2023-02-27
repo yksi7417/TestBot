@@ -9,6 +9,7 @@
 // max number of line is ~4.2billion
 
 // 4 bytes is nice w/ cache alignment  
+// modern 64bit CPU hs 16 registers - 4 bytes can fit onto the register nicely. 
 
 class LogEvent: IEvent{
 public:
