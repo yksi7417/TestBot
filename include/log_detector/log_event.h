@@ -29,6 +29,21 @@ public:
         return event_type_id; 
     }
 
+    uint32_t getTimestamp_yyyymmdd_utc()
+    {
+        return timestamp_yyyymmdd_utc;
+    }
+
+    uint32_t getTimestamp_HHMMSSsss_utc()
+    {
+        return timestamp_HHMMSSsss_utc;
+    }
+
+    uint32_t getLineNumber()
+    {
+        return timestamp_yyyymmdd_utc;
+    }
+
 private:
     uint32_t event_type_id; 
     uint32_t timestamp_yyyymmdd_utc;
