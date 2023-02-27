@@ -1,7 +1,6 @@
 #ifndef LOGDECTOR_H
 #define LOGDECTOR_H
 
-#include <Poco/AutoPtr.h>
 #include "core_interface/detector.h"
 #include "log_event.h"
 

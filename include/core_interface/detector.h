@@ -1,7 +1,6 @@
 #ifndef IDETECTOR_H
 #define IDETECTOR_H
 
-#include <Poco/AutoPtr.h>
 #include "context.h"
 #include "event.h"
 
