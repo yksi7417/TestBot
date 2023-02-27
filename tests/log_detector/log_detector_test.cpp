@@ -9,8 +9,15 @@ public:
 };
 
 
-TEST(TestMd5Case, CannotDetectAnythingWithEmptyContext) {
+TEST(TestLogDetectorCase, CannotDetectAnythingWithEmptyContext) {
     LogDetector log_detector; 
     MockContext context; 
     EXPECT_EQ(0, log_detector.detect(context).getEventId());
 }
+
+TEST(TestLogDetectorCase, SizeOfLogEventIs24Bytes) {
+    LogDetector log_detector; 
+    MockContext context; 
+    EXPECT_EQ(24, sizeof(log_detector.detect(context)));
+}
+
