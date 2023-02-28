@@ -13,13 +13,13 @@
 
 class LogEvent: IEvent{
 public:
-    LogEvent() : event_type_id(0), timestamp_yyyymmdd_utc(0), timestamp_HHMMSSsss_utc(0), line_number(0) {}
+    LogEvent() : event_type_id(0), timestamp_HHMMSSsss_utc(0), line_number(0) {}
 
     LogEvent(uint32_t event_type_id_, 
-            uint32_t timestamp_yyyymmdd_utc_, uint32_t timestamp_HHMMSSsss_utc_,
+            uint32_t timestamp_HHMMSSsss_utc_,
             uint32_t line_number_) : 
             event_type_id(event_type_id_), 
-            timestamp_yyyymmdd_utc(timestamp_yyyymmdd_utc_), timestamp_HHMMSSsss_utc(timestamp_HHMMSSsss_utc_), 
+            timestamp_HHMMSSsss_utc(timestamp_HHMMSSsss_utc_), 
             line_number(line_number_) 
         {
         }
@@ -29,11 +29,6 @@ public:
         return event_type_id; 
     }
 
-    uint32_t getTimestamp_yyyymmdd_utc()
-    {
-        return timestamp_yyyymmdd_utc;
-    }
-
     uint32_t getTimestamp_HHMMSSsss_utc()
     {
         return timestamp_HHMMSSsss_utc;
@@ -41,12 +36,11 @@ public:
 
     uint32_t getLineNumber()
     {
-        return timestamp_yyyymmdd_utc;
+        return line_number;
     }
 
 private:
     uint32_t event_type_id; 
-    uint32_t timestamp_yyyymmdd_utc;
     uint32_t timestamp_HHMMSSsss_utc;
     uint32_t line_number; 
 };
