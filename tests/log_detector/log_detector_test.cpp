@@ -4,7 +4,8 @@
 #include "log_detector/log_detector.h"
 
 
-class LogContext::LogContextImpl{};
+class LogContext::Impl{};
+class LogDetector::Impl{};
 
 class MockContext : public LogContext {
 public:
@@ -14,7 +15,7 @@ public:
 
 class TestFixture : public ::testing::Test {
 protected:
-  LogDetector log_detector;
+  LogDetector log_detector = LogDetector("someConfigFile.md");
 
 };
 

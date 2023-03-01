@@ -3,9 +3,9 @@
 #include <Poco/Exception.h>
 #include "log_detector/log_context.h"
  
-class LogContext::LogContextImpl {
+class LogContext::Impl {
 public:
-    LogContextImpl(const char* filename_) : filename(filename_) {}
+    Impl(const char* filename_) : filename(filename_) {}
 
 // member remain public - this is an inner class that's not exposed. 
     const char* filename; 
@@ -15,7 +15,7 @@ public:
 };
 
 LogContext::LogContext(const char* filename_)  {
-    impl = std::make_unique<LogContextImpl>(filename_);
+    impl = std::make_unique<Impl>(filename_);
 }
 
 void LogContext::loadFile() {

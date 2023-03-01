@@ -10,8 +10,8 @@ public:
     void loadFile();
 
 private:
-    class LogContextImpl; 
-    std::unique_ptr<LogContextImpl> impl; 
+    class Impl; 
+    std::unique_ptr<Impl> impl; 
 
 public:
     LogContext(const LogContext&) = delete;
