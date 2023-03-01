@@ -22,6 +22,11 @@ TEST_F(TestFixture, CannotDetectAnythingWithEmptyContext) {
 TEST_F(TestFixture, SizeOfLogEventIs24Bytes) {
     MockContext context; 
     EXPECT_EQ(24, sizeof(log_detector.detect(context)));
+    LogEvent logEvent; 
+    EXPECT_EQ(24, sizeof(LogEvent));
+    EXPECT_EQ(0, logEvent.getEventId());
+    EXPECT_EQ(0, logEvent.getLineNumber());
+    EXPECT_EQ(0, logEvent.getTimestamp_HHMMSSsss_utc());
 }
 
 TEST_F(TestFixture, GivenOneLineThatMatchesAPattern) {
