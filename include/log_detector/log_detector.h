@@ -3,10 +3,11 @@
 
 #include "core_interface/detector.h"
 #include "log_event.h"
+#include "log_context.h"
 
-class LogDetector : IDetector<LogEvent, std::string, std::string> {
+class LogDetector : IDetector<LogEvent, LogContext> {
 public:
-    LogEvent detect(const IContext<std::string,std::string>& context) const override;
+    LogEvent detect(const LogContext& context) const override;
 };
 
 #endif

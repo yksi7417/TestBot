@@ -3,9 +3,9 @@
 #include "gmock/gmock.h"
 #include "log_detector/log_detector.h"
 
-class MockContext : public IContext<std::string, std::string> {
+class MockContext : public LogContext {
 public:
-    MOCK_METHOD(std::string, get, (std::string arg), (override));
+    // MOCK_METHOD(std::string, get, (std::string arg), (override));
 };
 
 class TestFixture : public ::testing::Test {
