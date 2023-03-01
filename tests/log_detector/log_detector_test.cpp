@@ -3,8 +3,12 @@
 #include "gmock/gmock.h"
 #include "log_detector/log_detector.h"
 
+
+class LogContext::LogContextImpl{};
+
 class MockContext : public LogContext {
 public:
+    MockContext() : LogContext("somefilename.txt") {}
     // MOCK_METHOD(std::string, get, (std::string arg), (override));
 };
 
