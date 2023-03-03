@@ -9,13 +9,13 @@
 
 class LogConfig {
 public:
-    LogConfig(int eventId_, const std::string& event_, const std::string& regex_) : 
+    LogConfig(uint32_t eventId_, const std::string& event_, const std::string& regex_) : 
         eventId(eventId_), 
         event(event_),
         regex(regex_) {}
 
 private:
-    int eventId;    // can I use unsigned int instead?
+    uint32_t eventId;    
     std::string event; 
     std::string regex; 
 };
@@ -27,7 +27,7 @@ public:
         data = std::make_shared<std::unordered_map<std::string, LogConfig>>();
         io::CSVReader<3> csv(filename);
         csv.read_header(io::ignore_extra_column, "EventId", "Event", "RegexPattern"); 
-        int eventId; 
+        uint32_t eventId; 
         std::string event, regex;
         while (csv.read_row(eventId, event, regex)) {
             data->insert(std::make_pair(event, LogConfig(eventId, event, regex)));  // TODO:  can I use emplace instead? 

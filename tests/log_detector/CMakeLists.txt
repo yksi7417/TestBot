@@ -1,3 +1,5 @@
+add_compile_options(/wd4996 /wd4267 /wd4244)
+
 find_package(GTest REQUIRED)
 
 enable_testing()
