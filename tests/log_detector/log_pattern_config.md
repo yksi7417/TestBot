@@ -1,4 +1,0 @@
-| EventId | Event           | RegexPattern           | 
-| 1       | Launch Function | Launching Program XXX  |  
-| 2       | Do Something    | Performing Task AAA    | 
-| 3       | Complete        | AAA is completed       | 

@@ -13,13 +13,14 @@ function(add_plugin_tests plugin_name)
 
   add_executable(${plugin_name}_test ${test_sources})
 
-#   target_link_libraries(${plugin_name}_test ${plugin_name} common gtest)
   target_link_libraries(${plugin_name}_test PRIVATE  ${plugin_name} ${CONAN_LIBS} gtest)
 
   # Add the test to CTest
   add_test(${plugin_name}_test ${CMAKE_BINARY_DIR}/bin/${plugin_name}_test)
+
 endfunction()
 
 # Add tests for each plugin
 add_plugin_tests(md5_plugin)
-add_plugin_tests(log_detector)
+
+add_subdirectory(log_detector)

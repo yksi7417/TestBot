@@ -3,7 +3,6 @@
 #include "gmock/gmock.h"
 #include "log_detector/log_detector.h"
 
-
 class LogContext::Impl{};
 class LogDetector::Impl{};
 
