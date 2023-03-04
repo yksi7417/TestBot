@@ -14,7 +14,7 @@ public:
 
 class TestFixture : public ::testing::Test {
 protected:
-  LogDetector log_detector = LogDetector("someConfigFile.md");
+  LogDetector log_detector = LogDetector("build/bin/log_pattern_config.csv");
 
 };
 
@@ -36,5 +36,5 @@ TEST_F(TestFixture, SizeOfLogEventIs24Bytes) {
 TEST_F(TestFixture, GivenOneLineThatMatchesAPattern) {
     MockContext context; 
     EXPECT_EQ(1, log_detector.detect(context).getEventId());
-    EXPECT_EQ(12, log_detector.detect(context).getLineNumber());
+    EXPECT_EQ(3, log_detector.detect(context).getLineNumber());
 }

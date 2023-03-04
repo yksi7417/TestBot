@@ -14,6 +14,10 @@ public:
         event(event_),
         regex(regex_) {}
 
+    uint32_t getEventId() const { return eventId; }
+    const std::string& getEvent() const { return event; }
+    const std::string& getRegex() const { return regex; }
+
 private:
     uint32_t eventId;    
     std::string event; 
@@ -37,7 +41,5 @@ public:
 private:    
     std::shared_ptr<std::unordered_map<std::string, LogConfig>> data;
 };
-
-
 
 #endif 
