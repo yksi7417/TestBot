@@ -23,4 +23,7 @@ endfunction()
 # Add tests for each plugin
 add_plugin_tests(md5_plugin)
 
+
+# Add tests as subdirectory if the test folder does not conform to plugin convention and needs it's own CMakeLists.txt
 add_subdirectory(log_detector)
+add_subdirectory(quick_language)
